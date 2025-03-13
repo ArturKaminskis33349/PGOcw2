@@ -5,7 +5,22 @@ public class Main{
         printArray(arr2);
         int[] arr3 = new int[] {5,5,5,5,1};
         System.out.println(findDominant(arr3));
+        int[] arr4 = new int[] {1,2,3,4,5};
+        int[] arr5 = rotateArray(arr4, 1);
+        printArray(arr5);
         }
+
+    public static int[] rotateArray(int[] arr4, int positions) {
+        int[] arr5 = new int[arr4.length];
+        for(int i = 0; i < arr4.length; i++){
+            while(positions > 0){
+                arr5[i] = arr4[arr4.length - positions];
+                positions--;
+            }
+
+        }
+        return arr5;
+    }
 
     public static int findDominant(int[] arr3) {
         int x = 0;
